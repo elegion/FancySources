@@ -37,7 +37,7 @@ open class BaseViewDataSourceWithSections<Item, HeaderItem>: NSObject {
         self.sectionsData = sectionsData
     }
 
-    internal func registerIfNeeded(reuseIdentifier: String, closure: VoidClosure) {
+    open func registerIfNeeded(reuseIdentifier: String, closure: VoidClosure) {
         if !reuseIdentifiers.contains(reuseIdentifier) {
             closure()
             reuseIdentifiers.insert(reuseIdentifier)
