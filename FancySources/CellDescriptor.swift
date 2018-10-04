@@ -18,7 +18,7 @@ public struct CellDescriptor {
     }
     
     let type: DescriptorType
-    let reuseIdentifier: String
+    public let reuseIdentifier: String
     let configure: (UIView) -> Void
     
     public init<Cell>(reuseIdentifier: String, cellNib: UINib, configure: @escaping (Cell) -> Void) {
