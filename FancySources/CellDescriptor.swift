@@ -19,7 +19,7 @@ public struct CellDescriptor {
     
     let type: DescriptorType
     public let reuseIdentifier: String
-    let configure: (UIView) -> Void
+    public let configure: (UIView) -> Void
     
     public init<Cell>(reuseIdentifier: String, cellNib: UINib, configure: @escaping (Cell) -> Void) {
         self.type = .cellNib(cellNib)

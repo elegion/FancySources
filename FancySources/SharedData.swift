@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 public struct SharedData {
-    static let fakeCellIdentifier = "FancySources.FakeCell"
+    public static let fakeCellIdentifier = "FancySources.FakeCell"
 }
 
 extension UITableView {

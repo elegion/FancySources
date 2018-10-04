@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UITableView {
-    func registerCell(_ descriptor: CellDescriptor) {
+    public func registerCell(_ descriptor: CellDescriptor) {
         switch descriptor.type {
         case .cellNib(let cellNib):
             register(cellNib, forCellReuseIdentifier: descriptor.reuseIdentifier)
@@ -23,7 +23,7 @@ extension UITableView {
 }
 
 extension UICollectionView {
-    func registerCell(_ descriptor: CellDescriptor) {
+    public func registerCell(_ descriptor: CellDescriptor) {
         switch descriptor.type {
         case .cellNib(let cellNib):
             register(cellNib, forCellWithReuseIdentifier: descriptor.reuseIdentifier)
@@ -34,7 +34,7 @@ extension UICollectionView {
         }
     }
     
-    func registerSupplementary(_ descriptor: CellDescriptor, kind: String) {
+    public func registerSupplementary(_ descriptor: CellDescriptor, kind: String) {
         switch descriptor.type {
         case .cellNib(let cellNib):
             register(cellNib, forSupplementaryViewOfKind: kind, withReuseIdentifier: descriptor.reuseIdentifier)
