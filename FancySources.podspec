@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FancySources"
-  s.version      = "1.1"
+  s.version      = "1.2"
   s.summary      = "Flexible, generic and abstracted from UIKit data sources."
   s.description  = "FancySources
 
