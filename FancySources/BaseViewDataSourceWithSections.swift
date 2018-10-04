@@ -32,7 +32,7 @@ open class BaseViewDataSourceWithSections<Item, HeaderItem>: NSObject {
         assert(sectionsData.count == itemsWithSections.count)
     }
 
-    public func reload(itemsWithSections: [[Item]], sectionsData: [HeaderItem]) {
+    open func reload(itemsWithSections: [[Item]], sectionsData: [HeaderItem]) {
         displayedRows = itemsWithSections
         self.sectionsData = sectionsData
     }
@@ -44,7 +44,7 @@ open class BaseViewDataSourceWithSections<Item, HeaderItem>: NSObject {
         }
     }
 
-    internal func registerIfNeededSupplementary(reuseIdentifier: String, closure: VoidClosure) {
+    open func registerIfNeededSupplementary(reuseIdentifier: String, closure: VoidClosure) {
         if !suplementaryReuseIdentifiers.contains(reuseIdentifier) {
             closure()
             suplementaryReuseIdentifiers.insert(reuseIdentifier)

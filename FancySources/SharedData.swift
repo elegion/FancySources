@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-internal struct SharedData {
+public struct SharedData {
     static let fakeCellIdentifier = "FancySources.FakeCell"
 }
 
