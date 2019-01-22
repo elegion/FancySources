@@ -172,8 +172,9 @@ open class CollapsableTableViewDataSource<Item: CollapsableDataModel>: TableView
 
     public func visibleChildren(for section: Int) -> [Item] {
         if visibleChildren[section] == nil {
-            visibleChildren[section] = displayedRows[section].visibleChildren(isCollapsed)
+            visibleChildren[section] = displayedRows[safe: section]?.visibleChildren(isCollapsed)
         }
+
         return visibleChildren[section] ?? []
     }
 }
